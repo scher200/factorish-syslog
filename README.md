@@ -1,4 +1,4 @@
-# factorish/syslog
+# scher200/syslog
 
 ## About
 
