@@ -37,3 +37,10 @@ case "$TYPE" in
 esac
 
 set -eo pipefail
+
+trap on_exit INT TERM
+
+echo "==> syslog listening on $TYPE"
+exec socat -t0 -T0 -u $IN,reuseaddr,fork -
+
+wait
